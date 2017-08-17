@@ -1,0 +1,521 @@
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url('../fonts/Comfortaa-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Comfortaa-Light.woff') format('woff'), url('../fonts/Comfortaa-Light.ttf')  format('truetype'), url('../fonts/Comfortaa-Light.svg#Comfortaa-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url('../fonts/Comfortaa-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Comfortaa-Regular.woff') format('woff'), url('../fonts/Comfortaa-Regular.ttf')  format('truetype'), url('../fonts/Comfortaa-Regular.svg#Comfortaa-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url('../fonts/Comfortaa-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Comfortaa-Bold.woff') format('woff'), url('../fonts/Comfortaa-Bold.ttf')  format('truetype'), url('../fonts/Comfortaa-Bold.svg#Comfortaa-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Rounds Black';
+	src: url('fonts/Rounds Black.eot');
+	src: local('☺'), url('../fonts/Rounds Black.woff') format('woff'), url('../fonts/Rounds Black.ttf') format('truetype'), url('../fonts/Rounds Black.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.item {
+	width: 33.333%;
+	height: 100vh;
+	position: absolute;
+	transition: 1s;
+	z-index: 100;
+}
+
+/* -- HAMBYRGER-BEGINNING -- */
+
+#hambyrger {
+	position: absolute;
+	top: 5%;
+	right: 3%;
+	background-color: #cecece;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	z-index: 220;
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: 16px 13px;
+	transition: all ease 1s;
+}
+
+#hambyrger span {
+	display: block;
+	width: 19px;
+	height: 2px;
+	background-color: black;
+	margin-bottom: 4px;
+}
+
+#hambyrger:hover {
+	transform: rotate(90deg);
+	transition: all ease 1s;
+}
+
+#tip {
+	position: absolute;
+	top: 5.2%;
+	right: 4.6%;
+	height:  44px;
+	background-color: rgba( 0, 0, 0, 0.5);
+	width: 110px;
+	box-sizing: border-box;
+	border-radius: 30px 0 0 30px;
+	padding: 14px 20px;
+	z-index: 101;
+	opacity: 0;
+	transition: all ease 1s;
+}
+
+#tip p {
+    color: #cecece;
+}
+
+
+/* -- HAMBYRGER-END -- */
+
+/* -- CLOSE-BEGINNING -- */
+
+#close {
+	position: absolute;
+	top: 5%;
+	right: 3%;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	z-index: 220;
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: 22px 13px;
+	transition: all ease 1s;
+	display: none;
+}
+
+#close span {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: black;
+	margin-bottom: 4px;
+}
+
+.closeButton {
+	transform: rotate(45deg);
+}
+
+.closeTop {
+	transform: rotate(-44deg);
+	margin-top: -6px;
+}
+
+
+
+#closeTip {
+	z-index: 219;
+	position: absolute;
+	top: 5.2%;
+	right: 4.6%;
+	height:  44px;
+	background-color: rgba( 0, 0, 0, 0.5);
+	width: 110px;
+	box-sizing: border-box;
+	border-radius: 30px 0 0 30px;
+	padding: 14px 20px;
+	transition: all ease 1s;
+	display: none;
+}
+
+#closeTip p {
+    color: #cecece;
+}
+
+/* -- CLOSE-END -- */
+
+/* -- BACK-DEGINING --*/
+
+#back {
+	position: absolute;
+	z-index: 200;
+	width: 70px;
+	top: 5%;
+	left: 5%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+#back:hover img {
+	display: block;
+	left: 0;
+	opacity: 1;
+	transition: all ease 1s;
+}
+
+#back img {
+	width: 25px;
+	float: left;
+	opacity: 0;
+	left: 30px;
+	position: absolute;
+	transition: all ease 1s;
+}
+
+#back p {
+	width: 30px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 30px;
+	font-family: 'Comfortaa-Bold';
+	font-size: 18px;
+}
+
+/* -- BACK-END --*/
+
+/* -- NAV-BEGINNING -- */
+
+#nav {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 0;
+	opacity: 0;
+	top: 0;
+}
+
+#navbar {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	transition: all ease 2s;
+}
+
+#one, #two, #theer {
+	width: 0;
+	height: 100vh;
+	transition: all ease 2s;
+
+}
+
+.one {
+	height: 100vh;
+	background-color: #222222;
+	top: 0;
+	left: 0;
+	transition: all ease 2s;
+}
+
+.two {
+    height: 100vh;
+    background-color: #1a1919;
+    position: absolute;
+    top: 0;
+	left: 33.333%;
+}
+
+.three {
+	height: 100vh;
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	left: 66.666%;
+}
+
+.navbar a {
+	position: absolute;
+	top: 50%;
+}
+
+/* -- NAV-END -- */
+
+
+/* -- INFO-BEGINNING -- */
+
+#info {
+	left: 0;
+}
+
+.fio {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#section-info {
+	display: none;
+	background-color: #fff;
+	width: 100%;
+	height: 100vh;
+}
+
+.info-content h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.info-content img {
+	position: absolute;
+	width: 25%;
+	top: 25%;
+	left: 40%;
+}
+
+.info-content h2 {
+	position: absolute;
+	font-size: 25px;
+	left: 15%;
+	top: 60%;
+}
+
+.info-content p {
+	position: absolute;
+	top: 68%;
+	left: 20%;
+	font-size: 18px;
+	width: 70%;
+}
+
+
+/* -- INFO-END -- */
+
+/* -- CONTACTS-BEGINNING -- */
+
+#contacts {
+	right: 33.333%;
+	text-align: center;
+}
+
+#contacts-info {
+	display: none;
+	background: url(../img/contacts.png) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+}
+
+#contacts-info h2 {
+	font-size: 35px;
+	font-family: 'Comfortaa-Bold';
+	color: #052138;
+	position: absolute;
+	width: 100%;
+	top: 7%;
+}
+
+.contacts-adres {
+	position: absolute;
+	width: 100%;
+	top: 35%;
+}
+
+.contacts-adres p {
+	font-size: 25px;
+	font-family: 'Comfortaa-Regular';
+	margin-bottom: 2%;
+}
+
+.contacts-adres span {
+	font-size: 20px;
+	font-family: 'Comfortaa-Light';
+}
+
+.navbar-contacts {
+	position: absolute;
+	width: 100%;
+	bottom: 10%;
+}
+
+.navbar-contacts li {
+    display: inline-block;
+    margin-right: 2%;
+    width: 15%;
+}
+
+.navbar-contacts a {
+	text-decoration: none;
+	color: #396183;
+}
+
+.navbar-contacts div {
+	width: 120px;
+	height: 120px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.navbar-contacts img {
+	margin-top: 35px;
+	width: 50px;
+}
+
+.navbar-contacts p {
+	margin: 10px 0;
+	font-family: 'Comfortaa-Bold';
+	color: #060a24;
+}
+
+.navbar-contacts span {
+	font-family: 'Comfortaa-Regular';
+	color: #29326f;
+}
+
+/* -- CONTACTS-END -- */
+
+/* -- CONTACTS-BEGINNING -- */
+
+#summary {
+	right: 0;
+}
+
+#summary-home {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/sov_01.jpg) no-repeat center center;
+	background-size: cover;
+	display: none;
+}
+
+.summary-fio {
+	padding: 2% 15%;
+	margin-bottom: 2%;
+	text-shadow: 2px 2px 2px black, 0 0 2em black;
+}
+
+.summary-fio img {
+	width: 8.4%;
+	border-radius: 50%;
+	float: left;
+	margin-right: 1%;
+	box-shadow: 0 0 15px rgba(194,183,183,0.7)
+}
+
+.summary-fio h2 {
+	margin: 2.5% 0 0.5% 1%;
+	font-size: 20px;
+	font-family: 'Comfortaa-Bold';
+	color: #cecece;
+}
+
+.summary-fio p {
+	font-size: 18px;
+	font-family: 'Comfortaa-Regular';
+	color: #cecece;
+}
+
+.symmary-content {
+	padding: 4% 5%;
+}
+
+.symmary-content h1 {
+    margin-left: 30%;
+    margin-bottom: 2%;
+    font-size: 25px;
+	font-family: 'Comfortaa-Bold';
+	color: #000;
+}
+
+.symmary-content ul {
+    margin-left: 35%;
+    list-style-type:  disc;
+    color: #000;
+}
+
+.symmary-content li {
+	font-size: 16px;
+	font-family: 'Comfortaa-Bold';
+	margin-bottom: 1%;
+}
+
+#summary-hide {
+	width: 100%;
+	height: 100vh;
+	/*background: url(../img/sov_01.jpg) no-repeat center center;*/
+	background-color: #ccc;
+	background-size: cover;
+	display: block;
+	padding-top: 40%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#summary-hide p {
+	line-height: 1.5;
+	font-size: 60px;
+	cursor: pointer;
+	font-family: 'Comfortaa-Regular';
+}
+
+
+/* -- SUMMARY-END -- */
+
+/* -- HIDE-BEGINNING -- */
+
+#info-hide {
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 50%;
+}
+
+#info-hide p {
+	line-height: 1.5;
+	font-size: 60px;
+	cursor: pointer;
+	font-family: 'Comfortaa-Regular';
+}
+
+
+#contacts-hide {
+	width: 100%;
+	height: 100vh;
+	background-color: #cecece;
+	/*background: url(../img/contacts.png) no-repeat center center;*/
+	background-size: cover;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 50%;
+}
+
+#contacts-hide p {
+	line-height: 1.5;
+	font-size: 60px;
+	cursor: pointer;
+	font-family: 'Comfortaa-Regular';
+}
+
+
+/* -- HIDE-END -- */
+
+#hide {
+	position: absolute;
+	z-index: 1000;
+	display: none;
+}
